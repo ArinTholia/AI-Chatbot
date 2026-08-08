@@ -1,0 +1,133 @@
+<div class="page">
+
+  <div class="chat-container">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="chat-header">
+
+      <div class="header-left">
+
+        <div class="logo">
+          🤖
+        </div>
+
+        <div>
+
+          <h1>AI Chatbot</h1>
+
+          <div class="status">
+
+            <span class="online-dot"></span>
+
+            Online
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </header>
+
+   <!-- ================= CHAT ================= -->
+
+<main class="chat-body">
+
+  @for (message of messages; track $index) {
+
+    <div
+      class="chat-row"
+      [class.user-row]="message.sender === 'user'"
+      [class.bot-row]="message.sender === 'bot'">
+
+      <!-- Bot Avatar -->
+      @if (message.sender === 'bot') {
+        <div class="avatar bot-avatar">
+          🤖
+        </div>
+      }
+
+      <!-- Message -->
+      <div
+        class="message"
+        [class.bot]="message.sender === 'bot'"
+        [class.user]="message.sender === 'user'">
+
+        {{ message.text }}
+
+      </div>
+
+      <!-- User Avatar -->
+      @if (message.sender === 'user') {
+        <div class="avatar user-avatar">
+          👤
+        </div>
+      }
+
+    </div>
+
+  }
+  @if (isTyping) {
+
+<div class="chat-row bot-row">
+
+    <div class="avatar bot-avatar">
+        🤖
+    </div>
+
+    <div class="message bot">
+        Thinking...
+    </div>
+
+</div>
+
+}
+
+  <!-- Typing Indicator -->
+
+  @if (isTyping) {
+
+    <div class="chat-row bot-row">
+
+      <div class="avatar bot-avatar">
+        🤖
+      </div>
+
+      <div class="message bot typing-message">
+
+        <span class="typing-dot"></span>
+        <span class="typing-dot"></span>
+        <span class="typing-dot"></span>
+
+      </div>
+
+    </div>
+
+  }
+
+</main>
+    <!-- ================= INPUT ================= -->
+
+    <footer class="chat-footer">
+
+      <input
+        type="text"
+        placeholder="Type your message..."
+        [(ngModel)]="currentMessage"
+        (keyup.enter)="sendMessage()"
+      >
+
+      <button
+        (click)="sendMessage()"
+        [disabled]="currentMessage.trim()===''">
+
+        ➤
+
+      </button>
+
+    </footer>
+
+  </div>
+
+</div>
