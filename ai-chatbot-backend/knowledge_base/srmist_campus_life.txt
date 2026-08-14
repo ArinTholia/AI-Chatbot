@@ -1,0 +1,56 @@
+# SRMIST Campus Life, Clubs, and Cultural Activities
+
+## Cultural Festivals
+### Aaruush - National Level Techno-Management Fest
+- One of the largest technical festivals in South India, held annually in September/October.
+- Events include hackathons, robotics competitions, coding contests, paper presentations, and workshops.
+- Past sponsors include Google, Microsoft, Amazon, TCS, and Red Bull.
+- Attracts over 15,000 participants from 200+ colleges across India.
+
+### Milan - Cultural Fest
+- Annual cultural extravaganza featuring music, dance, drama, fashion shows, and literary events.
+- Celebrity performances from Bollywood and regional artists.
+- Inter-college competitions with cash prizes.
+
+## Student Clubs and Chapters
+
+### Technical Clubs
+- **Coding Club (CodeSRM)**: Weekly coding contests, DSA workshops, competitive programming training. Prepares students for ICPC and Google Code Jam.
+- **AI/ML Club**: Hands-on workshops on TensorFlow, PyTorch. Kaggle competition participation.
+- **Robotics Club (Robocon SRM)**: Builds robots for ABU Robocon Asia-Pacific competition. Has won multiple national awards.
+- **Cybersecurity Club**: Organizes CTF events, ethical hacking workshops, and bug bounty programs.
+- **Open Source Club**: Contributes to open-source projects. Mentors students for Google Summer of Code (GSoC).
+- **Blockchain Club**: Workshops on Ethereum, Solidity, and decentralized applications.
+- **IoT Lab Club**: Builds smart campus solutions using Arduino, Raspberry Pi, and ESP32.
+
+### Cultural and Social Clubs
+- **Music Club (Raga SRM)**: Western and Indian classical music performances and training.
+- **Dance Club (Nritya SRM)**: Classical, contemporary, hip-hop, and folk dance teams.
+- **Drama Club (Enact SRM)**: Theatre performances, street plays, and inter-college drama competitions.
+- **Photography Club**: Campus photography walks, photo exhibitions, and workshops.
+- **NSS (National Service Scheme)**: Community service, blood donation drives, rural development programs.
+- **Rotaract Club**: Social service projects, leadership development, and community outreach.
+
+### Sports Clubs
+- **Cricket Club**: Participates in inter-university tournaments. Has produced state-level players.
+- **Football Club**: Regular league matches and inter-college tournaments.
+- **Basketball Club**: Competes in South Zone university championships.
+- **Athletics Club**: Track and field training with professional coaches.
+- **E-Sports Club**: Competitive gaming in Valorant, CS2, and League of Legends. Organizes gaming tournaments.
+
+## Sports Facilities
+- Olympic-sized swimming pool.
+- Indoor badminton, table tennis, and squash courts.
+- Football ground, cricket ground, and athletics track (400m synthetic).
+- Fully equipped gymnasium with modern equipment.
+- Basketball and volleyball courts.
+- Yoga and meditation center.
+
+## Library - Central Library
+- One of the largest university libraries in India.
+- Over 1,50,000 books and 5,000+ journals (both print and digital).
+- Digital access to IEEE, Springer, Elsevier, and ACM research databases.
+- 24/7 reading rooms during exam season.
+- Separate discussion rooms for group study.
+- Computer terminals with internet access.
+- E-book and audiobook collection.

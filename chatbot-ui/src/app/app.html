@@ -1,133 +1,177 @@
-<div class="page">
-
-  <div class="chat-container">
-
-    <!-- ================= HEADER ================= -->
-
-    <header class="chat-header">
-
-      <div class="header-left">
-
-        <div class="logo">
-          🤖
+<div class="app-layout">
+  <!-- Left Sidebar -->
+  <aside class="sidebar" [class.mobile-hidden]="!showSidebar">
+    <div class="sidebar-header">
+      <div class="logo-area">
+        <div class="logo-icon">🎓</div>
+        <div class="logo-text">
+          <h1>SRMIST AI</h1>
+          <p>College Admission Assistant</p>
         </div>
-
-        <div>
-
-          <h1>AI Chatbot</h1>
-
-          <div class="status">
-
-            <span class="online-dot"></span>
-
-            Online
-
+      </div>
+      <button class="close-sidebar-btn" (click)="toggleSidebar()" aria-label="Close sidebar">✕</button>
+    </div>
+    
+    <div class="divider"></div>
+    
+    <div class="sidebar-content">
+      <h3 class="section-title">Quick Questions</h3>
+      <div class="chips-container">
+        @for (suggestion of suggestions; track suggestion) {
+          <button class="suggestion-chip" (click)="askSuggestion(suggestion)">
+            {{ suggestion }}
+          </button>
+        }
+      </div>
+    </div>
+    
+    <div class="divider"></div>
+    
+    <div class="sidebar-content chat-history">
+      <h3 class="section-title">Recent Chats</h3>
+      <div class="history-list">
+        @for (chat of savedChats; track chat.id) {
+          <div class="history-item" [class.active]="chat.id === activeChatId" (click)="loadChat(chat.id)">
+            <div class="chat-icon">💬</div>
+            <div class="chat-details">
+              <span class="chat-title" title="{{ chat.title }}">{{ chat.title }}</span>
+              <span class="chat-date">{{ chat.date }}</span>
+            </div>
+            <button class="delete-chat-btn" (click)="deleteChat(chat.id, $event)" title="Delete chat">✕</button>
           </div>
-
+        }
+        @if (savedChats.length === 0) {
+          <div class="empty-history">No past conversations</div>
+        }
+      </div>
+    </div>
+    
+    <div class="divider"></div>
+    
+    <div class="sidebar-footer">
+      <div class="stats-area">
+        <p class="stats-title">Powered by</p>
+        <div class="stats-items">
+          <span class="stat-item">🧠 Mistral LLM</span>
+          <span class="stat-item">🗄️ ChromaDB</span>
+          <span class="stat-item">🦙 Ollama</span>
         </div>
-
       </div>
-
-    </header>
-
-   <!-- ================= CHAT ================= -->
-
-<main class="chat-body">
-
-  @for (message of messages; track $index) {
-
-    <div
-      class="chat-row"
-      [class.user-row]="message.sender === 'user'"
-      [class.bot-row]="message.sender === 'bot'">
-
-      <!-- Bot Avatar -->
-      @if (message.sender === 'bot') {
-        <div class="avatar bot-avatar">
-          🤖
-        </div>
-      }
-
-      <!-- Message -->
-      <div
-        class="message"
-        [class.bot]="message.sender === 'bot'"
-        [class.user]="message.sender === 'user'">
-
-        {{ message.text }}
-
-      </div>
-
-      <!-- User Avatar -->
-      @if (message.sender === 'user') {
-        <div class="avatar user-avatar">
-          👤
-        </div>
-      }
-
-    </div>
-
-  }
-  @if (isTyping) {
-
-<div class="chat-row bot-row">
-
-    <div class="avatar bot-avatar">
-        🤖
-    </div>
-
-    <div class="message bot">
-        Thinking...
-    </div>
-
-</div>
-
-}
-
-  <!-- Typing Indicator -->
-
-  @if (isTyping) {
-
-    <div class="chat-row bot-row">
-
-      <div class="avatar bot-avatar">
-        🤖
-      </div>
-
-      <div class="message bot typing-message">
-
-        <span class="typing-dot"></span>
-        <span class="typing-dot"></span>
-        <span class="typing-dot"></span>
-
-      </div>
-
-    </div>
-
-  }
-
-</main>
-    <!-- ================= INPUT ================= -->
-
-    <footer class="chat-footer">
-
-      <input
-        type="text"
-        placeholder="Type your message..."
-        [(ngModel)]="currentMessage"
-        (keyup.enter)="sendMessage()"
-      >
-
-      <button
-        (click)="sendMessage()"
-        [disabled]="currentMessage.trim()===''">
-
-        ➤
-
+      
+      <button class="new-chat-btn" (click)="clearChat()">
+        <span class="icon">➕</span> New Chat
       </button>
+      
+      <div class="connection-status">
+        <div class="status-indicator" [class.online]="isConnected" [class.offline]="!isConnected">
+          <div class="pulse-ring"></div>
+          <div class="dot"></div>
+        </div>
+        <span class="status-text">{{ isConnected ? 'Connected' : 'Disconnected' }}</span>
+      </div>
+    </div>
+  </aside>
 
-    </footer>
-
-  </div>
-
+  <!-- Right Chat Area -->
+  <main class="chat-panel">
+    <header class="chat-header">
+      <button class="menu-btn" (click)="toggleSidebar()" aria-label="Toggle menu">
+        ☰
+      </button>
+      <div class="header-title">
+        <h2>SRMIST Admission Assistant</h2>
+        <div class="status-dot" [class.online]="isConnected" [class.offline]="!isConnected"></div>
+      </div>
+    </header>
+    
+    <div class="chat-messages" #chatContainer>
+      <div class="messages-wrapper">
+        @for (msg of messages; track $index) {
+          <div class="message-container" [class.user]="msg.sender === 'user'" [class.bot]="msg.sender === 'bot'">
+            @if (msg.sender === 'bot') {
+              <div class="avatar bot-avatar">🎓</div>
+            }
+            
+            <div class="message-content">
+              <div class="message-bubble">
+                @if (msg.sender === 'bot') {
+                  <div class="message-text" [innerHTML]="formatMarkdown(msg.text)"></div>
+                  <button class="copy-btn" (click)="copyMessage(msg.text, $index)" title="Copy message">
+                    {{ copiedMessageIndex === $index ? '✓' : '📋' }}
+                  </button>
+                  @if (msg.responseTime) {
+                    <div class="response-time">
+                      ⏱️ {{ (msg.responseTime / 1000).toFixed(1) }}s
+                    </div>
+                  }
+                } @else {
+                  <div class="message-text">{{ msg.text }}</div>
+                  <div class="avatar user-avatar">👤</div>
+                }
+              </div>
+              
+              @if (msg.sources && msg.sources.length > 0) {
+                <div class="sources-container">
+                  <div class="sources-title">Sources used:</div>
+                  <div class="sources-list">
+                    @for (source of msg.sources; track source.name) {
+                      <div class="source-card" title="Distance: {{ source.distance.toFixed(4) }}">
+                        <div class="source-icon">📚</div>
+                        <div class="source-info">
+                          <span class="source-name">{{ source.name.replace('.txt','').replace(/_/g, ' ') }}</span>
+                          <div class="score-bar-container">
+                            <div class="score-bar" 
+                                 [style.width.%]="getScorePercent(source.distance)"
+                                 [style.background]="getScoreColor(source.distance)">
+                            </div>
+                          </div>
+                        </div>
+                        <span class="relevance-badge" [style.color]="getScoreColor(source.distance)">{{ getScorePercent(source.distance) }}%</span>
+                      </div>
+                    }
+                  </div>
+                </div>
+              }
+            </div>
+          </div>
+        }
+        
+        @if (isTyping) {
+          <div class="message-container bot">
+            <div class="avatar bot-avatar">🎓</div>
+            <div class="message-content">
+              <div class="typing-skeleton">
+                <div class="shimmer-line line-1"></div>
+                <div class="shimmer-line line-2"></div>
+                <div class="shimmer-line line-3"></div>
+                <div class="thinking-timer">🧠 Thinking... {{ elapsedSeconds }}s</div>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+    
+    <div class="chat-input-area">
+      <div class="input-container">
+        <textarea 
+          [(ngModel)]="currentMessage" 
+          (keydown)="onKeydown($event)"
+          placeholder="Ask me anything about SRMIST admissions..." 
+          rows="1"
+          class="chat-textarea">
+        </textarea>
+        <button class="send-btn" (click)="sendMessage()" [disabled]="!currentMessage.trim() || isTyping">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="22" y1="2" x2="11" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg>
+        </button>
+      </div>
+      <div class="input-hints">
+        <span class="hint-left">SRMIST AI can make mistakes. Verify with official brochure.</span>
+        <span class="hint-right">Press Enter to send, Shift+Enter for new line</span>
+      </div>
+    </div>
+  </main>
 </div>

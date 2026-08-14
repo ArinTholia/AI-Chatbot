@@ -1,0 +1,61 @@
+# SRMIST Admission Process 2026
+
+## SRMJEEE (SRM Joint Engineering Entrance Examination)
+
+### About the Exam
+SRMJEEE is the entrance examination conducted by SRM Institute of Science and Technology for admission to B.Tech programs. It is held in multiple phases (typically 3 phases) throughout April and June each year.
+
+### Exam Pattern
+- Mode: Computer-Based Test (Online)
+- Duration: 2 hours 30 minutes
+- Total Questions: 125 (MCQ format)
+- Subjects and distribution:
+  - Physics: 35 questions
+  - Chemistry: 35 questions
+  - Mathematics/Biology: 40 questions
+  - English: 5 questions
+  - Aptitude: 10 questions
+- Marking: +3 for correct answer, No negative marking.
+- Language: English only.
+
+### Important Dates (2026 Approximate)
+- Registration Opens: October 2025
+- Registration Deadline: March 2026
+- Phase 1 Exam: April 2026 (third week)
+- Phase 2 Exam: June 2026 (first week)
+- Results: Within 7-10 days after each phase
+- Counselling: July 2026
+
+### Registration Process
+1. Visit the official SRMIST admission portal (www.srmist.edu.in).
+2. Click on "Apply Now" and fill the online application form.
+3. Upload passport size photograph and signature.
+4. Pay the application fee of Rs. 1,200 (online payment via credit/debit card or net banking).
+5. Download the admit card from the portal 7 days before the exam.
+6. Carry the admit card and a valid government photo ID to the exam center.
+
+### Exam Centers
+SRMJEEE is conducted in 130+ cities across India, including all state capitals and major cities. International centers are available in Dubai and Muscat.
+
+## Counselling Process
+1. After results are declared, qualified candidates are called for counselling based on their rank.
+2. Counselling is conducted online through the SRMIST portal.
+3. Students choose their preferred branch/specialization based on available seats and their rank.
+4. A counselling fee of Rs. 50,000 is payable at the time of seat confirmation (adjusted against first semester fees).
+5. Document verification is done at the campus before the academic session begins.
+
+### Documents Required for Counselling
+- SRMJEEE Admit Card and Rank Card
+- 10th and 12th mark sheets (originals and photocopies)
+- Transfer Certificate from previous institution
+- Migration Certificate (for students from other state boards)
+- Community/Caste Certificate (if applicable)
+- Passport-size photographs (6 copies)
+- Aadhaar Card
+- Medical fitness certificate
+
+## Direct Admission (Management Quota)
+A limited number of seats (approximately 30%) are available under management quota. Admission is based on 12th marks and a personal interview. Management quota fees are higher than regular admission fees.
+
+## NRI/International Admissions
+Separate seats are reserved for NRI and international students. Admission is based on SAT/equivalent scores or SRMJEEE performance. Fee structure for NRI students is in USD (approximately $6,000 per year for B.Tech programs).

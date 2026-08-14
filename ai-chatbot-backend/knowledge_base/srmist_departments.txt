@@ -1,0 +1,61 @@
+# SRMIST B.Tech Departments and Specializations
+
+## School of Computing
+The School of Computing at SRMIST is one of the largest in India with over 8,000 students.
+
+### Computer Science and Engineering (CSE)
+- Core CSE covers data structures, algorithms, operating systems, database management, and software engineering.
+- Faculty strength: 120+ professors including 35 PhDs.
+- Labs: Advanced Computing Lab, Cloud Computing Lab, Cybersecurity Lab.
+- Research areas: Machine Learning, Natural Language Processing, Computer Vision.
+
+### CSE - Artificial Intelligence and Machine Learning
+- Specialization in deep learning, neural networks, reinforcement learning, and computer vision.
+- Dedicated AI Lab with GPU workstations (NVIDIA A100).
+- Industry partnerships with Google, Microsoft, and IBM for guest lectures and internships.
+- Students work on real-world AI projects in final year capstone.
+
+### CSE - Data Science
+- Focus on big data analytics, statistical modeling, data visualization, and business intelligence.
+- Curriculum includes Python, R, Hadoop, Spark, Tableau, and Power BI.
+
+### CSE - Cyber Security
+- Covers ethical hacking, cryptography, network security, and digital forensics.
+- Students participate in national-level CTF (Capture The Flag) competitions.
+
+### Information Technology (IT)
+- Covers web technologies, mobile app development, cloud computing, and DevOps.
+- Active open-source contribution community.
+
+## School of Electronics and Communication
+### Electronics and Communication Engineering (ECE)
+- Focus on VLSI design, embedded systems, signal processing, and IoT.
+- Labs: VLSI Design Lab, Microprocessor Lab, Communication Systems Lab, IoT Innovation Lab.
+- Faculty strength: 80+ professors.
+- Industry collaborations with Texas Instruments, Qualcomm, and Intel.
+
+### ECE - Internet of Things (IoT)
+- Specialization in smart systems, sensor networks, edge computing, and industrial IoT.
+
+## School of Mechanical Engineering
+### Mechanical Engineering
+- Covers thermodynamics, manufacturing processes, robotics, and automobile engineering.
+- Labs: CAD/CAM Lab, Robotics Lab, 3D Printing Lab, Wind Tunnel Lab.
+- Active SAE (Society of Automotive Engineers) student chapter.
+- Students build Formula Student race cars and participate in national competitions.
+
+### Mechatronics
+- Interdisciplinary program combining mechanical, electronics, and computer science.
+- Focus on automation, control systems, and smart manufacturing.
+
+## School of Bioengineering
+### Biotechnology
+- Covers genetic engineering, bioinformatics, pharmaceutical biotechnology, and environmental biotech.
+- BSL-2 certified laboratory for advanced microbiology research.
+- Research collaborations with CSIR, ICMR, and international universities.
+
+## School of Civil Engineering
+### Civil Engineering
+- Covers structural engineering, environmental engineering, transportation, and geotechnical engineering.
+- Advanced Concrete Technology Lab, Environmental Engineering Lab, Survey Lab.
+- Students participate in building sustainable housing competitions.
